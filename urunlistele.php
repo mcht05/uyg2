@@ -8,14 +8,11 @@
 <th>Fiyati</th>
 </tr>
 
-<?php
+	<?php
 	
-	
-	
-	
-	
-	
-	
+	$dosya1=fopen("bilgi.txt","r");
+		$dosya2=fopen("not.txt","r");
+		while (!feof($dosya1) && !feof($dosya2))
 	
 	{
 		$kaynak=fgets($dosya,256);
