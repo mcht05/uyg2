@@ -32,7 +32,21 @@
 		fopen("urun.txt","w");
 	}
 	if ($_POST["ekle"])
+	{ if ($_POST["kaydet"])
 	{
+		if($_POST["u_adi"]=="" $_POST["u_markasi"]==""  $_POST["u_fiyati"]=="")
+		{
+			echo"Eksik bilgileri doldurunuz";
+		}
+		else
+		{
+			$dosya=fopen("bilgi.txt","a");
+			$yazilacak=$_POST["uadi"]."-".$_POST["umarkasi"]."-".$_POST["ufiyati"].
+			fputs($dosya,$yazilacak);
+			echo"********Ürün eklenmiştir*********";
+		}
+	}
+?>
 		
 		
 		
